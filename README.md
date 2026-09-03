@@ -7,6 +7,14 @@ The main goal of this project was solving a classic creative development headach
 ---
 [Screen Recording 2026-09-03 20.42.webm](https://github.com/user-attachments/assets/15a193d9-0381-446a-a3cb-8022aca13fb5)
 
+
+## 🎬 Live Preview & Aesthetics
+
+Designed with an editorial brutalist layout, heavy typography (`Bebas Neue`, `Playfair Display`, `Inter`), high-contrast dark modes, and dynamic scroll HUD overlays.
+
++-----------------------------------------------------------------------+|  J N G L E                                                            ||  A L I V E .                                                          ||                                                                       ||  [ Scroll-driven 60fps video scrub engine running in background ]     ||                                                                       ||  01  Into the Canopy ----------------------------- [Progress Bar]     |+-----------------------------------------------------------------------+
+---
+
 ## ⚡ How the Performance Fix Works
 
 If you've ever hooked up GSAP ScrollTrigger directly to `video.currentTime`, you know browsers usually choke. Rapidly overriding `currentTime` forces the video decoder to cancel current frame decodes and queue new ones, causing severe UI jank.
@@ -30,20 +38,9 @@ function scrubLoop() {
       }
     }
   });
-
   requestAnimationFrame(scrubLoop);
 }
-
-Stack & Libraries
-CategoryTechnology / Library
-CoreVanilla       HTML5, CSS3, JavaScript (ES6+)
-Animation         EngineGSAP 3.12.5
-Scroll            TrackingScroll
-Trigger           PluginFonts
-GoogleFonts      (Bebas Neue, Playfair Display, Inter)
-
-
-├── Assets/
+🛠️ Stack & LibrariesCategoryTechnology / LibraryCoreVanilla HTML5, CSS3, JavaScript (ES6+)Animation EngineGSAP 3.12.5Scroll TrackingScrollTrigger PluginFontsGoogle Fonts (Bebas Neue, Playfair Display, Inter)📁 Repository StructurePlaintext├── Assets/
 │   ├── jungle1.mp4          # Chapter 01 footage
 │   ├── Jungle2.mp4          # Chapter 02 footage
 │   ├── jungle4.mp4          # Chapter 03 footage
@@ -52,21 +49,11 @@ GoogleFonts      (Bebas Neue, Playfair Display, Inter)
 ├── index.html               # Semantic markup & video stage layout
 ├── style.css                # Custom layout, responsive grids, variables
 └── main.js                  # RAF scrub loop, custom cursor, GSAP timelines
-
-Running Locally
-git clone [https://github.com/your-username/jngla.git](https://github.com/your-username/jngla.git)
+🚀 Running LocallyNo npm installs or complex build pipelines required.Clone the repoBashgit clone [https://github.com/your-username/jngla.git](https://github.com/your-username/jngla.git)
 cd jngla
-
-Run a local server
-# Using Node's serve
+Run a local server(Since modern browsers restrict local video playback policies over plain file protocols, run it through a local HTTP server)Bash# Using Node's serve
 npx serve .
 
 # Or using Python
 python3 -m http.server 8000
-
-Open in browser
-
-Navigate to http://localhost:3000 (or http://localhost:8000).
-
-📝 License
-This project is open-source under the MIT License. Feel free to fork it, use the video scrub engine in your own builds, or drop a star if you found the code helpful!
+Open in browserNavigate to http://localhost:3000 (or http://localhost:8000).📝 LicenseThis project is open-source under the MIT License. Feel free to fork it, use the video scrub engine in your own builds, or drop a star if you found the code helpful!
