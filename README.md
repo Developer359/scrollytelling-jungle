@@ -8,12 +8,6 @@ The main goal of this project was solving a classic creative development headach
 [Screen Recording 2026-09-03 20.42.webm](https://github.com/user-attachments/assets/15a193d9-0381-446a-a3cb-8022aca13fb5)
 
 
-## 🎬 Live Preview & Aesthetics
-
-Designed with an editorial brutalist layout, heavy typography (`Bebas Neue`, `Playfair Display`, `Inter`), high-contrast dark modes, and dynamic scroll HUD overlays.
-
-+-----------------------------------------------------------------------+|  J N G L E                                                            ||  A L I V E .                                                          ||                                                                       ||  [ Scroll-driven 60fps video scrub engine running in background ]     ||                                                                       ||  01  Into the Canopy ----------------------------- [Progress Bar]     |+-----------------------------------------------------------------------+
----
 
 ## ⚡ How the Performance Fix Works
 
