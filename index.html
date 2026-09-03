@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JNGLA — Into the Wild</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor"><div id="cursor-dot"></div></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div id="loader-count">00</div>
+    <div id="loader-label">Loading environment</div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <span class="nav-logo">JNGLA</span>
+    <span class="nav-index">VOL. 01 — 2025</span>
+    <span class="nav-loc">Tropical Rainforest, Earth</span>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-vertical-text">23°N · 82°W — COORDINATES</div>
+
+    <div class="hero-headline">
+      <div class="hero-line-wrap">
+        <span class="hl stroke">JUNGLE</span>
+      </div>
+      <div class="hero-line-wrap">
+        <span class="hl filled">ALIVE.</span>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        A visual study of Earth's<br />
+        most complex living system.
+      </p>
+      <div class="hero-scroll-cue">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>BREATHE &nbsp;·&nbsp; DECAY &nbsp;·&nbsp; THRIVE &nbsp;·&nbsp; GROW &nbsp;·&nbsp; LISTEN &nbsp;·&nbsp; WITNESS &nbsp;·&nbsp;</span>
+      <span>BREATHE &nbsp;·&nbsp; DECAY &nbsp;·&nbsp; THRIVE &nbsp;·&nbsp; GROW &nbsp;·&nbsp; LISTEN &nbsp;·&nbsp; WITNESS &nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- SCROLL TRIGGERS -->
+  <div id="t1" class="trigger"></div>
+  <div id="t2" class="trigger"></div>
+  <div id="t3" class="trigger"></div>
+  <div id="t4" class="trigger"></div>
+  <div id="t5" class="trigger"></div>
+
+  <!-- FIXED VIDEO STAGE -->
+  <div id="stage">
+    <div class="video-container">
+      <video id="v1" class="bg-video active" src="Assets/jungle1.mp4" playsinline muted preload="auto"></video>
+      <video id="v2" class="bg-video" src="Assets/Jungle2.mp4" playsinline muted preload="auto"></video>
+      <video id="v3" class="bg-video" src="Assets/jungle4.mp4" playsinline muted preload="auto"></video>
+      <video id="v4" class="bg-video" src="Assets/jungle5.mp4" playsinline muted preload="auto"></video>
+      <video id="v5" class="bg-video" src="Assets/jungle6.mp4" playsinline muted preload="auto"></video>
+    </div>
+
+    <div id="vignette"></div>
+
+    <!-- CHAPTER HUD -->
+    <div id="chapter-overlay">
+      <div id="ch-num">01</div>
+      <div id="ch-title">Into the Canopy</div>
+      <div id="ch-bar"><div id="ch-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="stat-rule"></div>
+    <div class="stats-row">
+      <div class="stat">
+        <div>
+          <span class="stat-num" data-target="40000">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Documented<br/>species</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div>
+          <span class="stat-num" data-target="2.4">0</span>
+          <span class="stat-suffix">M km²</span>
+        </div>
+        <div class="stat-label">Of living<br/>canopy</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div>
+          <span class="stat-num" data-target="60">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <div class="stat-label">Earth's<br/>oxygen source</div>
+      </div>
+    </div>
+    <div class="stat-rule"></div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote-section">
+    <div class="q-mark">"</div>
+    <blockquote class="q-text">
+      The jungle does not<br/>ask to be beautiful.
+    </blockquote>
+    <cite class="q-cite">— Anonymous Naturalist</cite>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="ft-statement">
+      <span class="ft-statement-text">Into<br/><em>the Wild</em></span>
+      <div class="ft-statement-line"></div>
+    </div>
+
+    <div class="ft-grid">
+      <div class="ft-col">
+        <p class="ft-col-label">Chapters</p>
+        <ul class="ft-links">
+          <li>Into the Canopy</li>
+          <li>Mist &amp; Root</li>
+          <li>Ancient Light</li>
+          <li>Silence Below</li>
+          <li>Wild Breath</li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <p class="ft-col-label">Context</p>
+        <ul class="ft-links">
+          <li>Tropical Rainforest</li>
+          <li>23°N · 82°W</li>
+          <li>Vol. 01 — 2025</li>
+          <li>Earth's Lungs</li>
+        </ul>
+      </div>
+      <div class="ft-col ft-col-right">
+        <p class="ft-col-label">Identity</p>
+        <p class="ft-brand">JNGLA</p>
+        <p class="ft-tagline">Where the wild<br/>still breathes.</p>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <span class="ft-copy">© 2025 JNGLA. All observations reserved.</span>
+      <button class="ft-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <span>Back to top</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 12V2M2 7l5-5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
