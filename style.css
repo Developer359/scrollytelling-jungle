@@ -65,7 +65,7 @@ body::after {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 6vw;
+  padding: 7vw;
 }
 
 #loader-count {
